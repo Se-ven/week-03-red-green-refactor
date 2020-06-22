@@ -10,5 +10,15 @@ describe('Vehicle Rating Calculator', function () {
         const smallCar = app.smallCar;
         const rating = app.calculateVehicleRating(smallCar);
         assert.equal(rating, 10);
+
     });
+
+    it('calculates a rating of 6 for a truck with six cylinders and gasoline fuel source.', function () {
+        const smallTruck = app.smallTruck;
+        const truckRating = app.calculateVehicleRating(smallTruck);
+        assert.equal(truckRating, 6);
+
+    });
+
+
 }); 

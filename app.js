@@ -4,6 +4,11 @@ module.exports = {
         fuelType: 'diesel',
     },
 
+    smallTruck: {
+        engineSize: 6,
+        fuelType: 'gasoline',
+    },
+
 
     calculateVehicleRating: function (vehicle) {
 
@@ -12,9 +17,14 @@ module.exports = {
             fuelType: 'diesel',
         }
 
+        let smallTruck = {
+            engineSize: 6,
+            fuelType: 'gasoline',
+        }
+
         let vehicles = [];
         vehicles.push(smallCar);
-
+        vehicles.push(smallTruck);
 
         let rating = 0;
 
@@ -41,6 +51,10 @@ module.exports = {
         if (vehicle.fuelType == 'diesel') {
             rating = rating
 
+        }
+
+        else {
+            rating = rating - 2
         }
 
 
